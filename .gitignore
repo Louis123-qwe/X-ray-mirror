@@ -1,0 +1,8 @@
+node_modules
+dist
+isa_BP3D*
+partof_BP3D*
+torso_extra*
+torso/
+data/
+.zip

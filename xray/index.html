@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>X-Ray Mirror</title></head>
+<body><div class="wrap">
+<h1>💀 X-Ray Mirror</h1>
+<div class="stage" id="stage">
+  <div class="mirror"><video id="vid" playsinline muted></video><div id="dim"></div><canvas id="ov"></canvas><canvas id="gl"></canvas></div>
+  <canvas id="labels"></canvas>
+  <div id="msg"><div id="st">Your camera stays on your device. Nothing is uploaded.</div><button id="go">Start camera</button></div>
+</div>
+<div class="card">
+  <h2>Layers</h2>
+  <div class="row" id="presets"><button class="chip" data-p="skull">Bones</button><button class="chip" data-p="brain">Brain</button><button class="chip" data-p="muscles">Muscles</button><button class="chip" data-p="organs">Organs</button><button class="chip on" data-p="all">Everything</button></div>
+  <div class="grid">
+    <label><input type="checkbox" data-k="skull" checked>Skull</label><label><input type="checkbox" data-k="brain" checked>Brain</label>
+    <label><input type="checkbox" data-k="muscles" checked>Muscles &amp; glands</label><label><input type="checkbox" data-k="eyes" checked>Eyes</label>
+    <label><input type="checkbox" data-k="teeth" checked>Teeth</label><label><input type="checkbox" data-k="neck" checked>Neck bones</label>
+    <label><input type="checkbox" data-k="tbones" checked>Torso bones</label><label><input type="checkbox" data-k="organs" checked>Torso organs</label>
+    <label><input type="checkbox" data-k="hands" checked>Hand bones</label><label><input type="checkbox" data-k="outline" checked>Head outline</label>
+    <label><input type="checkbox" data-k="labels" checked>Show labels</label><label><input type="checkbox" data-k="tracking">Show tracking data</label>
+  </div>
+  <h2>Look</h2>
+  <div class="row"><button class="chip on" id="mx">X-ray</button><button class="chip" id="ms">Solid</button></div>
+  <div class="sl"><span>Brightness</span><b></b><input type="range" data-s="bright" min="20" max="100" value="80" data-scale=".01"></div>
+  <div class="sl"><span>Real me showing through</span><b></b><input type="range" data-s="real" min="0" max="100" value="45" data-scale=".01"></div>
+  <div class="sl"><span>Head labels</span><b></b><input type="range" data-s="nlabels" min="0" max="40" value="16" data-unit="n"></div>
+  <div class="sl"><span>Torso labels</span><b></b><input type="range" data-s="ntlabels" min="0" max="37" value="8" data-unit="n"></div>
+  <h2>Fit to my head &amp; body <button class="chip" id="reset">Reset fit</button></h2>
+  <div class="sl"><span>Overall size</span><b></b><input class="fit" type="range" data-s="size" min="70" max="140" value="100" data-scale=".01"></div>
+  <div class="sl"><span>Width</span><b></b><input class="fit" type="range" data-s="wd" min="80" max="120" value="100" data-scale=".01"></div>
+  <div class="sl"><span>Height</span><b></b><input class="fit" type="range" data-s="ht" min="80" max="120" value="100" data-scale=".01"></div>
+  <div class="sl"><span>Depth</span><b></b><input class="fit" type="range" data-s="dp" min="80" max="120" value="100" data-scale=".01"></div>
+  <div class="sl"><span>Left / right</span><b></b><input class="fit" type="range" data-s="lr" min="-30" max="30" value="0" data-unit="cm"></div>
+  <div class="sl"><span>Up / down</span><b></b><input class="fit" type="range" data-s="up" min="-30" max="30" value="0" data-unit="cm"></div>
+  <div class="sl"><span>Forward / back</span><b></b><input class="fit" type="range" data-s="fw" min="-30" max="30" value="0" data-unit="cm"></div>
+  <div class="sl"><span>Torso size</span><b></b><input class="fit" type="range" data-s="tsize" min="70" max="140" value="100" data-scale=".01"></div>
+  <div class="sl"><span>Torso length</span><b></b><input class="fit" type="range" data-s="tht" min="70" max="130" value="100" data-scale=".01"></div>
+  <div class="sl"><span>Torso up / down</span><b></b><input class="fit" type="range" data-s="tup" min="-30" max="30" value="0" data-unit="cm"></div>
+  <small>Tip: pick the Solid look, set “Real me showing through” to about half, then line the skull up with your face. Stand back so your shoulders (and waist, if you can) are in view for the torso.<br>Anatomy models: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japan.</small>
+</div></div>
+<script type="module" src="/src/main.js"></script>
+</body></html>
